@@ -53,6 +53,8 @@ outputSlider.textContent = sizeSlider.value;
 
 sizeSlider.addEventListener("input", (event)=>{
   outputSlider.textContent = event.target.value;
+  deleteBoxes();
+  drawBoxes(outputSlider.innerText);
 })
 
  
