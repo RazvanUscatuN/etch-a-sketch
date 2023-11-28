@@ -22,6 +22,15 @@ function drawBoxes(sizeOfBoxes){
 
     } 
   }
+
+  //hover effect 
+  const hoverEffect = document.querySelectorAll(".box-active");
+
+  for (let elem of hoverEffect){
+    elem.addEventListener("mouseenter",function(){
+      elem.style.backgroundColor = "green";
+    })
+  }
 }
 
 function deleteBoxes(){
@@ -32,16 +41,8 @@ function deleteBoxes(){
 
 }
 
-drawBoxes(16);
+// drawBoxes(16);
 
-//hover effect 
-const hoverEffect = document.querySelectorAll(".box-active");
-
-for (let elem of hoverEffect){
-  elem.addEventListener("mouseenter",function(){
-    elem.style.backgroundColor = "green";
-  })
-}
 
 //TODO create a input button type range for the size of boxes
 
@@ -58,12 +59,13 @@ sizeSlider.addEventListener("input", (event)=>{
 //TODO apply button where redraw the boxes
 
 const applyButton = document.querySelector(".redraw-button");
+drawBoxes(outputSlider.innerText);
 
 applyButton.addEventListener("click", function(){
   deleteBoxes();
   drawBoxes(outputSlider.innerText);
-  console.log(outputSlider.innerText);
 })
+
 
 
 //TODO a reset button to reset the current drawing(clear button)
