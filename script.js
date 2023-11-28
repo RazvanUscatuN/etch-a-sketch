@@ -1,4 +1,4 @@
-const mainContainer = document.querySelector(".container");
+const mainContainer = document.querySelector(".grid-container");
 
 
 function drawBoxes(sizeOfBoxes){
@@ -20,8 +20,16 @@ function drawBoxes(sizeOfBoxes){
 
       mainContainer.appendChild(divBox);
 
-    }
+    } 
   }
+}
+
+function deleteBoxes(){
+  const boxes = document.querySelectorAll(".box-active");
+  for(let box of boxes){
+    box.remove();
+  }
+
 }
 
 drawBoxes(16);
@@ -34,4 +42,31 @@ for (let elem of hoverEffect){
     elem.style.backgroundColor = "green";
   })
 }
+
+//TODO create a input button type range for the size of boxes
+
+const sizeSlider = document.querySelector(".size-slider");
+const outputSlider = document.querySelector(".output-slider");
+
+outputSlider.textContent = sizeSlider.value;
+
+sizeSlider.addEventListener("input", (event)=>{
+  outputSlider.textContent = event.target.value;
+})
+
+ 
+//TODO apply button where redraw the boxes
+
+const applyButton = document.querySelector(".redraw-button");
+
+applyButton.addEventListener("click", function(){
+  deleteBoxes();
+  drawBoxes(outputSlider.innerText);
+  console.log(outputSlider.innerText);
+})
+
+
+//TODO a reset button to reset the current drawing(clear button)
+//TODO make a color piker button that let you choose the color of the pen
+//TODO get rid of grid with taking care of outline from drawing boxes
 

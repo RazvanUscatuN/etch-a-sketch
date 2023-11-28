@@ -8,8 +8,14 @@
 </head>
 <body>
   <h1>This is a Sketpad</h1>
-  <div class="container"></div>
-
+  <div class="main-container">
+    <div class="control-panel">
+      <input class="size-slider" type="range" min="2" max="32" step="2" value="16"/>
+      <p>Value: <span class="output-slider"></span></p>
+      <input class="redraw-button" type="button" value="Apply"/>
+    </div>
+    <div class="grid-container"></div>
+  </div>
 
   <script src="./script.js"></script>
 </body>
