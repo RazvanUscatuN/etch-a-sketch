@@ -7,6 +7,7 @@ body{
     margin:0;
     padding: 0;
     height: 100vh;
+    background-color: lightyellow;
     
 }
 
@@ -21,6 +22,7 @@ body{
     width: 200px;
     height: 300px;
     background-color: lightblue;
+    gap:20px;
 }
 
 .main-container .grid-container {
@@ -28,10 +30,6 @@ body{
     flex-wrap: wrap;
     align-items: stretch;
     border: 5px solid;
-    
-    
-    
-    background-color: lightblue;
     width: 700px;
     height: 700px;
 }

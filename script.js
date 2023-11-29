@@ -41,7 +41,7 @@ function deleteBoxes(){
 
 }
 
-// drawBoxes(16);
+
 
 
 //TODO create a input button type range for the size of boxes
@@ -55,22 +55,64 @@ sizeSlider.addEventListener("input", (event)=>{
   outputSlider.textContent = event.target.value;
   deleteBoxes();
   drawBoxes(outputSlider.innerText);
+
+  const boxes = document.querySelectorAll(".box-active");
+  for(let box of boxes){
+    if(outlineShown){
+      box.style.outline = "1px solid";
+    }else{
+      box.style.outline = "none";
+    }
+  }
+
+
 })
+
+
+
+//TODO get rid of grid with taking care of outline from drawing boxes
+
+const btnGrid = document.querySelector(".btn-grid");
+let outlineShown = true;
+
+
+
+btnGrid.addEventListener("click",function(){
+  const boxes = document.querySelectorAll(".box-active");
+  
+  for(let box of boxes) {
+    if(outlineShown){
+      box.style.outline = "none";
+    }else{
+      box.style.outline = "1px solid";
+    }
+  }
+
+  outlineShown = !outlineShown;
+
+});
+
 
  
 //TODO apply button where redraw the boxes
 
-const applyButton = document.querySelector(".redraw-button");
+const resetBtn = document.querySelector(".redraw-button");
 drawBoxes(outputSlider.innerText);
 
-applyButton.addEventListener("click", function(){
+resetBtn.addEventListener("click", function(){
   deleteBoxes();
   drawBoxes(outputSlider.innerText);
+
+  const boxes = document.querySelectorAll(".box-active");
+
+  for(let box of boxes){
+    if(outlineShown){
+      box.style.outline = "1px solid";
+    }else{
+      box.style.outline = "none";
+    }
+  }
+
 })
 
-
-
-//TODO a reset button to reset the current drawing(clear button)
-//TODO make a color piker button that let you choose the color of the pen
-//TODO get rid of grid with taking care of outline from drawing boxes
 
