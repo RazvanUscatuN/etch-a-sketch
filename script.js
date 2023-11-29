@@ -48,13 +48,18 @@ function deleteBoxes(){
 
 const sizeSlider = document.querySelector(".size-slider");
 const outputSlider = document.querySelector(".output-slider");
+const secondOutput = document.querySelector(".second-output");
+
 
 outputSlider.textContent = sizeSlider.value;
 
 sizeSlider.addEventListener("input", (event)=>{
   outputSlider.textContent = event.target.value;
+  secondOutput.innerText = event.target.value;
+  
+
   deleteBoxes();
-  drawBoxes(outputSlider.innerText);
+  drawBoxes(event.target.value);
 
   const boxes = document.querySelectorAll(".box-active");
   for(let box of boxes){
@@ -64,18 +69,14 @@ sizeSlider.addEventListener("input", (event)=>{
       box.style.outline = "none";
     }
   }
-
-
+  
 })
-
 
 
 //TODO get rid of grid with taking care of outline from drawing boxes
 
 const btnGrid = document.querySelector(".btn-grid");
 let outlineShown = true;
-
-
 
 btnGrid.addEventListener("click",function(){
   const boxes = document.querySelectorAll(".box-active");
@@ -91,7 +92,6 @@ btnGrid.addEventListener("click",function(){
   outlineShown = !outlineShown;
 
 });
-
 
  
 //TODO apply button where redraw the boxes
