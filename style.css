@@ -7,8 +7,21 @@ body{
     margin:0;
     padding: 0;
     height: 100vh;
-    
-    
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size:50px;
+    color: rgb(46, 69, 196);
+    margin:0;
+}
+
+h2{
+    font-family: 'Permanent Marker', cursive;
+    color:#ebcc45;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 40px;
 }
 
 .main-container {
@@ -28,7 +41,6 @@ body{
     background-color: lightblue;
     border-radius: 8px;
     align-self: center;
-    
 }
 
 .main-container .grid-container {
@@ -47,7 +59,6 @@ body{
     flex-grow: 1;
     align-items: stretch;
     outline-color:lightblue;
-    
 }
 
 .main-container .size-slider{
@@ -58,7 +69,7 @@ body{
 .btn-grid {
     font-family: "Lucida Console", "Courier New", monospace;
     width: 50%;
-    font-size: 20px;
+    font-size: 23px;
     padding: 10px;
     border-radius: 8px;
     background-color: royalblue;
@@ -79,6 +90,7 @@ body{
 
 .control-panel h3 {
     font-size: 30px;
+    color: rgb(22, 61, 177);
 }
 
 .control-panel p, span{
