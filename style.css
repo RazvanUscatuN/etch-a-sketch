@@ -7,7 +7,7 @@ body{
     margin:0;
     padding: 0;
     height: 100vh;
-    background-color: lightyellow;
+    
     
 }
 
@@ -26,6 +26,8 @@ body{
     width: 200px;
     height: 350px;
     background-color: lightblue;
+    border-radius: 8px;
+    align-self: center;
     
 }
 
@@ -36,16 +38,21 @@ body{
     border: 5px solid;
     width: 700px;
     height: 700px;
+    border-radius:8px;
+    border-color:lightblue;
 }
 
 .main-container .box-active {
     display: flex;
     flex-grow: 1;
     align-items: stretch;
+    outline-color:lightblue;
+    
 }
 
 .main-container .size-slider{
     width: 80%;
+    
 }
 .redraw-button,
 .btn-grid {

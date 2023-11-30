@@ -11,11 +11,12 @@ function drawBoxes(sizeOfBoxes){
   for(let i = 0; i < sizeOfBoxes; i++){
     for(let j = 0; j < sizeOfBoxes; j++){
       const divBox = document.createElement("div");
-      divBox.style.backgroundColor = "red";
+      // divBox.style.backgroundColor = "red";
 
       divBox.style.minWidth = `${boxDimensions}%`;
       divBox.style.minHeight = `${boxDimensions}%`;
-      divBox.style.outline = "1px solid";
+      divBox.style.outline = "1px solid lightblue";
+
       divBox.setAttribute("class", "box-active")
 
       mainContainer.appendChild(divBox);
@@ -28,7 +29,7 @@ function drawBoxes(sizeOfBoxes){
 
   for (let elem of hoverEffect){
     elem.addEventListener("mouseenter",function(){
-      elem.style.backgroundColor = "green";
+      elem.style.backgroundColor = "royalblue";
     })
   }
 }
@@ -64,7 +65,7 @@ sizeSlider.addEventListener("input", (event)=>{
   const boxes = document.querySelectorAll(".box-active");
   for(let box of boxes){
     if(outlineShown){
-      box.style.outline = "1px solid";
+      box.style.outline = "1px solid lightblue";
     }else{
       box.style.outline = "none";
     }
@@ -85,7 +86,7 @@ btnGrid.addEventListener("click",function(){
     if(outlineShown){
       box.style.outline = "none";
     }else{
-      box.style.outline = "1px solid";
+      box.style.outline = "1px solid lightblue";
     }
   }
 
@@ -107,7 +108,7 @@ resetBtn.addEventListener("click", function(){
 
   for(let box of boxes){
     if(outlineShown){
-      box.style.outline = "1px solid";
+      box.style.outline = "1px solid lightblue";
     }else{
       box.style.outline = "none";
     }
@@ -115,8 +116,4 @@ resetBtn.addEventListener("click", function(){
 
 })
 
-//TODO This day is about style, make the style of control pannel 
-//TODO change the font for all 
-//TODO make the button round 
-//TODO Change the font of the title 
-//TODO change the color of boxes and color
+
