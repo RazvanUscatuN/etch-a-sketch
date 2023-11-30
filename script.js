@@ -115,4 +115,8 @@ resetBtn.addEventListener("click", function(){
 
 })
 
-
+//TODO This day is about style, make the style of control pannel 
+//TODO change the font for all 
+//TODO make the button round 
+//TODO Change the font of the title 
+//TODO change the color of boxes and color

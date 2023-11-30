@@ -45,16 +45,31 @@ body{
 }
 
 .main-container .size-slider{
-    /* -webkit-appearance: none; 
-    height: 50px; */
     width: 80%;
 }
 .redraw-button,
 .btn-grid {
+    font-family: "Lucida Console", "Courier New", monospace;
     width: 50%;
     font-size: 20px;
     padding: 10px;
+    border-radius: 8px;
+    background-color: royalblue;
+    color:white;
+    box-shadow: 0 5px 0 lightblue;
 }
+.redraw-button:active{
+    box-shadow: none;
+    transform: translateY(5px);
+    transition: all .1s;
+}
+
+.btn-grid:active{
+    box-shadow: none;
+    transform: translateY(5px);
+    transition: all .1s;
+}
+
 .control-panel h3 {
     font-size: 30px;
 }
