@@ -1,5 +1,3 @@
-
-
 body{
     display: flex;
     flex-direction: column;
@@ -9,12 +7,14 @@ body{
     height: 100vh;
 }
 
+
 h1{
     font-family: 'Permanent Marker', cursive;
     font-size:50px;
     color: rgb(46, 69, 196);
     margin:0;
 }
+
 
 h2{
     font-family: 'Permanent Marker', cursive;
@@ -24,10 +24,12 @@ h2{
     font-size: 40px;
 }
 
+
 .main-container {
     display: flex;
     gap:30px;
 }
+
 
 .main-container .control-panel {
     display: flex;
@@ -43,6 +45,7 @@ h2{
     align-self: center;
 }
 
+
 .main-container .grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -54,12 +57,14 @@ h2{
     border-color:lightblue;
 }
 
+
 .main-container .box-active {
     display: flex;
     flex-grow: 1;
     align-items: stretch;
     outline-color:lightblue;
 }
+
 
 .main-container .size-slider{
     width: 80%;
@@ -76,11 +81,14 @@ h2{
     color:white;
     box-shadow: 0 5px 0 lightblue;
 }
+
+
 .redraw-button:active{
     box-shadow: none;
     transform: translateY(5px);
     transition: all .1s;
 }
+
 
 .btn-grid:active{
     box-shadow: none;
@@ -88,10 +96,12 @@ h2{
     transition: all .1s;
 }
 
+
 .control-panel h3 {
     font-size: 30px;
     color: rgb(22, 61, 177);
 }
+
 
 .control-panel p, span{
     font-size:25px;
